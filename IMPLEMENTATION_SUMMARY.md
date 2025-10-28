@@ -86,7 +86,7 @@ No caching, no session state, no conversation memory.
 ## Installation & Setup
 
 ### Prerequisites
-- Python 3.10+
+- Python 3.12+
 - pip or Poetry
 
 ### Option 1: Using Poetry (Recommended)

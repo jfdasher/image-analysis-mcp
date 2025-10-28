@@ -16,7 +16,7 @@
 **Size:** 2.2KB
 
 **Features:**
-- Base image: Python 3.11-slim
+- Base image: Python 3.12-slim
 - Installs all system dependencies (libraw, OpenCV libs, etc.)
 - Installs Poetry and all Python dependencies
 - Creates non-root user `mcp` (UID 1000)
@@ -67,7 +67,7 @@
 docker build -t image-analysis-mcp:latest .
 ```
 
-1. **Base Image:** Downloaded Python 3.11-slim (Debian)
+1. **Base Image:** Downloaded Python 3.12-slim (Debian)
 2. **System Dependencies:** Installed build tools, libraw, OpenCV libraries
 3. **Poetry:** Installed Poetry 1.7.1
 4. **Python Dependencies:** Installed 48 packages including:
@@ -103,7 +103,7 @@ docker run --rm --entrypoint=/bin/bash image-analysis-mcp:latest \
 ```
 **Result:**
 - User: `mcp` (non-root)
-- Python: 3.11.14
+- Python: 3.12.x
 
 ### ✅ Health Check
 Docker health check configured to verify imports every 30 seconds.

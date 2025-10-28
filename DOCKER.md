@@ -170,7 +170,7 @@ print('Dimensions:', result['metadata']['dimensions'])
 
 ### What's Included
 
-- **Base:** Python 3.11-slim (Debian)
+- **Base:** Python 3.12-slim (Debian)
 - **System Libraries:**
   - build-essential (compilers)
   - libraw-dev (RAW image processing)
@@ -393,6 +393,6 @@ For issues related to:
 
 **Image:** image-analysis-mcp:latest
 **Size:** ~2.4GB
-**Base:** python:3.11-slim
+**Base:** python:3.12-slim
 **User:** mcp (UID 1000)
 **Version:** 1.0.0

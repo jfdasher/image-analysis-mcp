@@ -1,7 +1,7 @@
 # Image Analysis MCP Server Dockerfile
 # Builds a production-ready image with all dependencies pre-installed
 
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \

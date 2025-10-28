@@ -48,7 +48,7 @@ See **[DOCKER.md](DOCKER.md)** for complete Docker documentation.
 ### Option 2: Poetry
 
 ```bash
-# Prerequisites: Python 3.10+, Poetry
+# Prerequisites: Python 3.12+, Poetry
 cd image_analysis
 
 # Install dependencies
@@ -61,7 +61,7 @@ poetry shell
 ### Option 3: pip
 
 ```bash
-# Prerequisites: Python 3.10+
+# Prerequisites: Python 3.12+
 cd image_analysis
 
 # Install the package

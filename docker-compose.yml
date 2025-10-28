@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  image-analysis-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: image-analysis-mcp:latest
+    container_name: image-analysis-mcp-server
+
+    # Mount a volume for accessing images
+    # This allows the container to read images from your host system
+    volumes:
+      - ${IMAGE_DIR:-./test_images}:/images:ro
+
+    # Environment variables (optional)
+    environment:
+      - FASTMCP_DEBUG=${FASTMCP_DEBUG:-false}
+
+    # Resource limits (optional but recommended)
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+          cpus: '2'
+        reservations:
+          memory: 1G
+          cpus: '0.5'
+
+    # Restart policy
+    restart: unless-stopped
+
+    # Use stdin/stdout for MCP communication
+    stdin_open: true
+    tty: true
+
+    # Network mode (host for direct access)
+    # network_mode: bridge
+
+    # Labels for organization
+    labels:
+      - "app=image-analysis-mcp"
+      - "version=1.0.0"
+      - "description=Image Analysis MCP Server"
+
+# Optional: Create a network for the service
+# networks:
+#   mcp-network:
+#     driver: bridge
